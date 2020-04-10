@@ -53,3 +53,6 @@ Constructor Methods
 ### App Entry
 
 Run the app from this module only if we are in the main namespace
+
+https://pythonspot.com/maze-in-pygame/
+https://github.com/Mekire/Snake/blob/master/snake.py

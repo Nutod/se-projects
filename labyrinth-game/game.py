@@ -4,7 +4,7 @@ import pygame
 class Player:
     x = 10
     y = 10
-    speed = 1
+    speed = 2
  
     def moveRight(self):
         self.x = self.x + self.speed
@@ -37,6 +37,7 @@ class App:
         pygame.display.set_caption('Pygame pythonspot.com example')
         self._running = True
         self._image_surf = pygame.image.load("pygame.png").convert()
+        self._block_surf = pygame.image.load("pngwave.png").convert()
  
     def on_event(self, event):
         if event.type == QUIT:
