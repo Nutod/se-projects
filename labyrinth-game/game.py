@@ -1,26 +1,28 @@
 from pygame.locals import *
 import pygame
 from classes.Player import Player
- 
-class App:
-    windowWidth = 800
-    windowHeight = 600
-    player = 0
- 
+from classes.Labyrinth import Labyrinth
+
+class App: 
     def __init__(self):
         self._running = True
         self._display_surf = None
         self._image_surf = None
+        self._block_surf = None
+        self.windowWidth = 800
+        self.windowHeight = 600
+        self.player = 0
         self.player = Player()
+        self.labyrinth = Labyrinth()
  
     def on_init(self):
         pygame.init()
         self._display_surf = pygame.display.set_mode((self.windowWidth,self.windowHeight), pygame.HWSURFACE)
         
-        pygame.display.set_caption('Pygame pythonspot.com example')
+        pygame.display.set_caption('Labyrinth Game')
         self._running = True
-        self._image_surf = pygame.image.load("pygame.png").convert()
-        self._block_surf = pygame.image.load("pngwave.png").convert()
+        self._image_surf = pygame.image.load("./assets/pygame.png").convert()
+        self._block_surf = pygame.image.load("./assets/pngwave.png").convert()
  
     def on_event(self, event):
         if event.type == QUIT:
@@ -32,6 +34,7 @@ class App:
     def on_render(self):
         self._display_surf.fill((0,0,0))
         self._display_surf.blit(self._image_surf,(self.player.x,self.player.y))
+        self.labyrinth.draw(self._display_surf, self._block_surf)
         pygame.display.flip()
  
     def on_cleanup(self):
@@ -65,5 +68,5 @@ class App:
         self.on_cleanup()
  
 if __name__ == "__main__" :
-    theApp = App()
-    theApp.on_execute()
+    game = App()
+    game.on_execute()
