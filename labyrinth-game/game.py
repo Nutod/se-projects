@@ -1,8 +1,8 @@
 from pygame.locals import *
 import pygame
+from classes.Player import Player
  
 class App:
- 
     windowWidth = 800
     windowHeight = 600
     player = 0
