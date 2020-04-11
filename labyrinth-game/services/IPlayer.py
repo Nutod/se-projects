@@ -1,13 +1,13 @@
 class IPlayer():
    """interface for the Player class"""
    @abstractmethod
-   def move_up(self): pass
+   def moveUp(self): pass
 
    @abstractmethod
-   def move_down(self): pass
+   def moveDown(self): pass
 
    @abstractmethod
-   def move_left(self): pass
+   def moveLeft(self): pass
 
    @abstractmethod
-   def move_right(self): pass
+   def moveRight(self): pass

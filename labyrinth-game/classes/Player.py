@@ -1,6 +1,6 @@
 # Player class logic
 class Player:
-   def __init__(self, x = 10, y = 10, speed = 2):
+   def __init__(self, x = 20, y = 20, speed = 5):
       # Define the initial state of the Player Object 
       self.x = x
       self.y = y
