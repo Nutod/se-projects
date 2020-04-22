@@ -1,8 +1,16 @@
-class IPlayer:
-    def load_data_source(self, path: str, file_name: str) -> str:
-        """Load in the file for extracting text."""
-        pass
+from abc import ABCMeta, abstractmethod
 
-    def extract_text(self, full_file_name: str) -> dict:
-        """Extract text from the currently loaded file."""
-        pass
+class IPlayer(metaclass=ABCMeta):
+    """Interface for the Player Class"""
+    
+    @abstractmethod
+    def move_up(self): pass
+
+    @abstractmethod
+    def move_left(self): pass
+
+    @abstractmethod
+    def move_down(self): pass
+
+    @abstractmethod
+    def move_right(self): pass
