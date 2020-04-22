@@ -5,7 +5,7 @@ from enum import Enum
 
 from abstract.IUserCommand import IUserCommand
 
-'''Game Control Commands'''
+""" Game Control Commands """
 class Exit(IUserCommand):
     """ Exit command to stop the game"""
     def get_command_tag(self):
@@ -18,7 +18,7 @@ class Exit(IUserCommand):
         return True, "Game is exiting"
 
 
-''' Direction Commands '''
+""" Direction Commands """
 class MoveUp(IUserCommand):
     def get_command_tag(self):
         return "up"
