@@ -5,6 +5,20 @@ from enum import Enum
 
 from abstract.IUserCommand import IUserCommand
 
+'''Game Control Commands'''
+class Exit(IUserCommand):
+    """ Exit command to stop the game"""
+    def get_command_tag(self):
+        return "exit"
+
+    def get_args_count(self):
+        return 0
+
+    def evaluate(self, args):
+        return True, "Game is exiting"
+
+
+''' Direction Commands '''
 class MoveUp(IUserCommand):
     def get_command_tag(self):
         return "up"
