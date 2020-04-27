@@ -1,3 +1,2 @@
-import random
-
-print("Game Running...")
+username = input('Get username')
+print(username)
