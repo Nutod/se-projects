@@ -28,7 +28,7 @@ class Labyrinth:
         boundary_index_to_start = self.size
         boundary_index_gap = self.size - 1
 
-        for i in range(self.size - 2):
+        for _ in range(self.size - 2):
             boundaries_list.append(actual_list[boundary_index_to_start])
             boundaries_list.append(
                 actual_list[boundary_index_to_start + boundary_index_gap])
