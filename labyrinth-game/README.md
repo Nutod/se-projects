@@ -1,58 +1,35 @@
-# Labyrinth Game in Python
+# Labyrinth Game
 
-## Project Breakdown
+## Purpose
 
-1. Player
-2. Labyrinth
-3. App Controller
-4. App Entry
+This is a labyrinth Game done while following the software engineering course at Novosibirsk state university.
 
-### Player
+The goal is to create a simple game with as much good practices and features that fits a production environment as possible.
 
-Class Player
+The lecturer of this Course is Graninas : https://github.com/graninas
 
-Constructor Properties
+## Game Description
 
-- Position(x,y)
-- Velocity
+Labyrinth" is a one-player turn-by-turn game which should be implemented as a console application.
 
-Class Methods
+The Game consists of labyrinth, labyrinth objects, user inventory, CLI interface.
 
-- MoveUp
-- MoveDown
-- MoveLeft
-- MoveRight
+The Computer is the master of game.
 
-### Labyrinth
+Game is controlled by text commands.
 
-Class Labyrinth
+Initially, the player can't see the labyrinth. The player should explore the labyrinth on its own.
 
-Constructor Properties
+The Goal is to find the treasure and to exit the labyrinth
 
-- Grid(M\*N)
+More information about the Game can be found here:
+[Labyrinth](https://en.wikipedia.org/wiki/Labyrinth_%28paper-and-pencil_game%29)
 
-Constructor Methods
+## Game Commands
 
-- Draw grid to screen
-
-### App Controller
-
-Class App Controller
-
-Constructor Properties
-
-- Take in the other files as input
-
-Constructor Methods
-
-- Init
-- Render
-- Execute
-- Cleanup
-
-### App Entry
-
-Run the app from this module only if we are in the main namespace
-
-https://pythonspot.com/maze-in-pygame/
-https://github.com/Mekire/Snake/blob/master/snake.py
+1. up or w to move up
+2. down or s to move down
+3. left or a to move left
+4. right or d to move right
+5. map to show the map of the labyrinth
+6. full_map to show the full map with nothing hidden
