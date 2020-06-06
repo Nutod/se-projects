@@ -1,4 +1,6 @@
-class Player:
+from services.Interfaces.ICharacter import ICharacter
+
+class Player(ICharacter):
   def __init__(self, Labyrinth):
     self.labyrinth = Labyrinth()
     self.position = 0
@@ -25,7 +27,7 @@ class Player:
     if new_position in game_area:
       self.set_player_position(new_position)
 
-    return (True, "Player moved up", new_position) if new_position in game_area else (False, "Player position not updated", self.position)
+    return (True, "Step executed", new_position) if new_position in game_area else (False, "Step impossible, wall detected", self.position)
 
   def move_right(self, game_area):
     new_position = self.position + self.size
@@ -36,7 +38,7 @@ class Player:
     if new_position in game_area:
       self.set_player_position(new_position)
 
-    return (True, "Player moved right", new_position) if new_position in game_area else (False, "Player position not updated", self.position)
+    return (True, "Step executed", new_position) if new_position in game_area else (False, "Step impossible, wall detected", self.position)
 
   def move_down(self, game_area):
     new_position = self.position + 1
@@ -44,7 +46,7 @@ class Player:
     if new_position in game_area:
       self.set_player_position(new_position)
 
-    return (True, "Player moved down", new_position) if new_position in game_area else (False, "Player position not updated", self.position)
+    return (True, "Step executed", new_position) if new_position in game_area else (False, "Step impossible, wall detected", self.position)
 
   def move_left(self, game_area):
     new_position = self.position - self.size
@@ -55,5 +57,5 @@ class Player:
     if new_position in game_area:
       self.set_player_position(new_position)
 
-    return (True, "Player moved left", new_position) if new_position in game_area else (False, "Player position not updated", self.position)
+    return (True, "Step executed", new_position) if new_position in game_area else (False, "Step impossible, wall detected", self.position)
 

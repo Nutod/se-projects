@@ -1,4 +1,6 @@
-class Bear:
+from services.Interfaces.ICharacter import ICharacter
+
+class Bear(ICharacter):
   def __init__(self, Labyrinth):
     self.labyrinth = Labyrinth()
     self.position = 51
